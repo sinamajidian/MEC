@@ -1,3 +1,4 @@
+
 clear all
 close all
 p = logspace(-4,-.295);
@@ -15,7 +16,6 @@ c=100;
 for  k=1:length(p)
     Pc3(k)=binocdf(floor(c/2),c,p(k))^l;
 end
-
 
 
 
@@ -86,25 +86,6 @@ semilogx(p,Pp3)
 
 legend('Constant c=2','Constant c=10','Constant c=100','Uniform on [1,2]','Uniform on [1,10]','Uniform on [1,100]','Poisson with \lambda=2','Poisson with \lambda=10','Poisson with \lambda=100')
 
-% plot(p,p1,p,p2,p,p3,p,p4,'LineWidth',2)
-%legend('c=5  ','c=20  ','c=60  ','c=10  ')
-% plot(p,P1,p,P2,p,P3,p,P4,p,P5,p,P6,'LineWidth',2)
 
-%title('Haplotype length=100')
 ylabel('P\{c-MEC\}','FontSize',14)
 xlabel('Sequencing error rate','FontSize',14)
-
-
-
-
-% 
-% figure(2)
-% C=[c_u2,c_p1,c_p2,c_p3];
-% hist(C,30)
-% legend('Uniform on [1,2]','Uniform on [1,10]','Poisson with \lambda=2','Poisson with \lambda=10','Poisson with \lambda=100')
-% 
-% figure(3)
-% C=[c_u1,c_u2,c_p1,c_p2];
-% hist(C,20) 
-% legend('Uniform on [1,2]','Uniform on [1,10]','Poisson with \lambda=2','Poisson with \lambda=10')
-% 
